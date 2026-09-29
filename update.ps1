@@ -52,7 +52,7 @@ try {
     }
     Write-UpdateLog "Backup created at $backup"
 
-    $preserve = @(".env", "settings.json", "blocked_domains.txt", "blocked_companies.txt", "blocked_country_domains.txt", "block_metadata.json", "dashboard.log", "dashboard-error.log", "job_finder.log", "update.log")
+    $preserve = @(".env", "settings.json", "blocked_domains.txt", "blocked_companies.txt", "blocked_country_domains.txt", "block_metadata.json", "dashboard.log", "dashboard-error.log", "job_finder.log", "search_skips.jsonl", "update.log")
 
     New-Item -ItemType Directory -Path $TempRoot -Force | Out-Null
     Expand-Archive -LiteralPath $ZipPath -DestinationPath $TempRoot -Force
